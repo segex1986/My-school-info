@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sayfa Tasarımı</title>
+    <style>
+      /* Genel stil */
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Üst kısım (Resim ve Bilgilendirme) */
+      .top-container {
+        display: flex;
+        flex: 1;
+      }
+
+      /* Resimlerin döneceği kutu (16:9 en-boy oranı) */
+      .image-box {
+        flex: 70%;
+        background-color: #ffcccb; /* Pembe */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Gölge efekti */
+        aspect-ratio: 16 / 9; /* 16:9 en-boy oranı */
+      }
+
+      /* Bilgilendirme kutusu (%30) */
+      .info-box {
+        flex: 30%;
+        background-color: #add8e6; /* Açık mavi */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Gölge efekti */
+        position: relative;
+      }
+
+      /* Okul logosu için alan */
+      .logo-area {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 100px; /* Logo genişliği */
+        height: 100px; /* Logo yüksekliği */
+        background-color: #d3d3d3; /* Gri renk */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+      }
+
+      /* Alt kısım */
+      .bottom-container {
+        height: 30%; /* Resim kutusunun %30'u kadar yükseklik */
+        background-color: #90ee90; /* Yeşil */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      /* En alt kısım (Kırmızı kutu) */
+      .footer {
+        height: 30%; /* Alt kısmın %30'u kadar yükseklik */
+        background-color: #ff0000; /* Kırmızı */
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Yazıların kaydırılması */
+      .scrolling-text {
+        white-space: nowrap;
+        position: absolute;
+        animation: scroll-text 10s linear infinite;
+        font-size: 20px;
+        color: white;
+      }
+
+      /* Yazı kaydırma animasyonu */
+      @keyframes scroll-text {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Üst Kısım -->
+    <div class="top-container">
+      <!-- Resimlerin döneceği kutu -->
+      <div class="image-box">Resimlerin Döneceği Kutu</div>
+      <!-- Bilgilendirme kutusu -->
+      <div class="info-box">
+        Bilgilendirme Alanı
+        <!-- Okul logosu için alan -->
+        <div class="logo-area">Okul Logosu</div>
+      </div>
+    </div>
+
+    <!-- Alt Kısım -->
+    <div class="bottom-container">Alt Kutu</div>
+
+    <!-- En Alt Kısım (Kırmızı kutu) -->
+    <div class="footer">
+      <div class="scrolling-text">
+        Bu yazı sağdan sola doğru kayacak ve başa dönecek. Bu yazı sağdan sola
+        doğru kayacak ve başa dönecek.
+      </div>
+    </div>
+  </body>
+</html>
